@@ -26,8 +26,6 @@ ul,ol {
   padding-left: 0;
 }
 
-img {display: block;}
-
 .list {list-style: none;}
 .link {text-decoration: none;}
 
@@ -49,6 +47,12 @@ body {font-family: var(--main-font);
 .page-header-container {
     display: flex;
     align-items: center;
+    border: 1px solid #ECECEC;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .page-nav 
@@ -65,13 +69,13 @@ display: flex;
 
 
 .contacts {
-    display: flex;
-    margin-left: auto;
-}
+ display: flex;  margin-left: auto; }
+
+.mail {padding-right:50px;}
 
 
 .logo {
-    margin-right: 93px;
+   margin-right: 93px;
 }
 .logo-first {
 font-family: var(--secondary-font);
@@ -101,6 +105,7 @@ color: var(--colour-main);
 .menu-link:hover,
 .menu-link:focus {color:var(--accent-colour);}
 
+
 .header-contact {
 font-weight: 500;
 line-height: 1.14;
@@ -118,33 +123,64 @@ color: var(--colour-contacts);
     background-color: 
     #2F303A;
 }
-
+ 
+.hero-container {
+    text-align: center;
+    justify-content: center
+}
 .hero-title {
 font-weight: 900;
 font-size: 44px;
 line-height: 1.36;
-text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 color: var(--colour-white);
+padding: 200px 252px 30px;
 }
 
 .modal-btn {
+min-width: 200px;
+padding: 10px 32px;
 background-color:var(--accent-colour);
 color:var(--colour-white);
 font-weight: 700;
 font-size: 16px;
 line-height: 1.88;
-display: flex;
-align-items: center;
-text-align: center;
 letter-spacing: 0.06em;
 cursor: pointer;
-
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+margin-bottom: 200px;
 }
 /* --------------------------- /HERO */
 
 /* --------------------------- ADVANTAGES  */
+
+.advantages-list { 
+display: flex;
+flex-wrap: wrap;
+margin-left: -30px;
+margin-top: -30px;
+}
+
+.advantages-card {
+    flex-basis: calc((100% - 120px) / 4);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.hidden-title  {  
+position: absolute; 
+width: 1px; 
+height: 1px; 
+margin: -1px; 
+border: 0; 
+padding: 0; 
+white-space: nowrap; 
+clip-path: inset(100%); 
+clip: rect(0 0 0 0); 
+overflow: hidden; 
+}
 
 .advantages-title {
 font-weight: 700;
@@ -162,15 +198,46 @@ color: var(--colour-contacts);
 /* --------------------------- /ADVANTAGES  */
 
 /* --------------------------- ABOUT US  */
+.about-us-list {
+    display: flex;
+    flex-wrap: wrap;
+margin-left: -30px;
+margin-top: -30px;
+}
+
+.about-us-card {
+    flex-basis: calc((100% - 90px) / 3);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.about-us-item {
+display: block;
+max-width: 100%; 
+height: auto;
+}
+
 /* --------------------------- /ABOUT US  */
 
 /* --------------------------- OUR TEAM  */
+.our-team-list {
+    display: flex;
+    flex-wrap: wrap;
+margin-left: -30px;
+margin-top: -30px;
+}
+
 .our-team {
     background-color: var(--background-colour);
 }
 
 .our-team-item-li {
     background-color: var(--colour-white);
+    flex-basis: calc((100% - 120px) / 4);
+    margin-left: 30px;
+    margin-top: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
 }
 
 .our-team-member-name {
@@ -189,16 +256,23 @@ text-align: center;
 letter-spacing: 0.03em;
 color:var(--colour-contacts);}
 
+.team-employees-wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 /* --------------------------- /OUR TEAM  */
 
 /* -------------------- FILTER BTNS  */
+
 .works-list {
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-text-align: center;
-letter-spacing: 0.03em;
+display: flex;
+margin-bottom: 50px;
+justify-content: center
 }
+
+.works-item:not(:last-child) {
+    margin-right: 8px;}
 
 .works-links { 
 font-weight: 500;
@@ -209,14 +283,39 @@ letter-spacing: 0.03em;
 color:var(--colour-main);    
 }
 
+.works-item {
+background: #F5F4FA;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.62;
+text-align: center;
+letter-spacing: 0.03em;
+}
+
 .works-links:hover,
 .works-links:focus {background:var(--accent-colour);
 color: white;
-cursor:pointer}
+cursor:pointer;
+}
 
 /* -------------------- /FILTER BTNS */
 
 /* -------------------- PORTFOLIO WORKS */
+
+.work-pic {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+
+}
+
+.work-img {
+    flex-basis: calc((100% - 90 px) / 3 );
+    width: 370px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
 
 .work-name {
 color: var(--colour-main)1;
@@ -231,9 +330,16 @@ line-height: 1.88;
 letter-spacing: 0.03em;
 color: var(--colour-contacts);}
 
+.img-wrap { 
+    padding: 20px 24px;
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+}
+
 /* -------------------- /PORTFOLIO WORKS*/
 
 /* --------------------------- FOOTER  */
+.footer-size {padding-top: 60px;}
 
 .footer {background-color: #2F303A;}
 
@@ -250,10 +356,17 @@ font-style: normal;
 letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
 }
+
+.footer-info {padding-top: 20px;}
+
+
 /* --------------------------- /FOOTER  */
 
 /* --------------------------- COMPONENTS  */
-
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .section-descriprion {
 font-weight: 700;
@@ -261,7 +374,9 @@ font-size: 36px;
 line-height: 1.17;
 text-align: center;
 letter-spacing: 0.03em;
-color: #212121; }
+color: #212121; 
+margin-bottom: 50px;
+}
     
 .logo-background-dark {color: var(--colour-white);}
 .logo-background-white {color:var(--colour-black);}
