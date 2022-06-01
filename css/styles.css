@@ -42,17 +42,24 @@ body {font-family: var(--main-font);
     padding-right: 15px;
 }
 
+img {display: block;
+    max-width: 100%; 
+    height: auto;}
+
 
 /* --------------------------- HEADER */
+.page-header {
+    border: 1px solid #ECECEC;
+}
+
 .page-header-container {
     display: flex;
     align-items: center;
-    border: 1px solid #ECECEC;
     border-top: none;
     border-left: none;
     border-right: none;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .page-nav 
@@ -71,7 +78,7 @@ display: flex;
 .contacts {
  display: flex;  margin-left: auto; }
 
-.mail {padding-right:50px;}
+.mail {margin-right:50px;}
 
 
 .logo {
@@ -120,8 +127,9 @@ color: var(--colour-contacts);
 
 /* --------------------------- HERO  */
 .hero {
-    background-color: 
-    #2F303A;
+    background-color: #2F303A;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
  
 .hero-container {
@@ -135,7 +143,10 @@ line-height: 1.36;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 color: var(--colour-white);
-padding: 200px 252px 30px;
+margin-bottom: 30px;
+width: 696px;
+margin-left: auto;
+margin-right: auto;
 }
 
 .modal-btn {
@@ -150,7 +161,6 @@ letter-spacing: 0.06em;
 cursor: pointer;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
-margin-bottom: 200px;
 }
 /* --------------------------- /HERO */
 
@@ -188,7 +198,9 @@ font-size: 14px;
 line-height: 16px;
 letter-spacing: 0.03em;
 text-transform: uppercase;
-color: var(--colour-main);}
+color: var(--colour-main);
+margin-bottom: 10px;
+}
 
 .advantages-descriptions {
 line-height: 1.71;
@@ -198,8 +210,13 @@ color: var(--colour-contacts);
 /* --------------------------- /ADVANTAGES  */
 
 /* --------------------------- ABOUT US  */
+.about-us {
+    padding-top: 0px;
+    padding-bottom: 94px;
+}
+
 .about-us-list {
-    display: flex;
+     display: flex;
     flex-wrap: wrap;
 margin-left: -30px;
 margin-top: -30px;
@@ -209,12 +226,6 @@ margin-top: -30px;
     flex-basis: calc((100% - 90px) / 3);
     margin-left: 30px;
     margin-top: 30px;
-}
-
-.about-us-item {
-display: block;
-max-width: 100%; 
-height: auto;
 }
 
 /* --------------------------- /ABOUT US  */
@@ -247,6 +258,7 @@ line-height: 1.19;
 text-align: center;
 letter-spacing: 0.03em;
 color:var(--colour-main);
+margin-bottom: 10px;
 }
 
 .our-team-member-position {
@@ -322,7 +334,8 @@ color: var(--colour-main)1;
 font-weight: 700;
 font-size: 18px;
 line-height: 2;
-letter-spacing: 0.06em;}
+letter-spacing: 0.06em;
+margin-bottom: 4px;}
 
 .work-descriptions {
 font-size: 16px;
@@ -334,14 +347,16 @@ color: var(--colour-contacts);}
     padding: 20px 24px;
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
-}
+    border-top: none;
+   }
 
 /* -------------------- /PORTFOLIO WORKS*/
 
 /* --------------------------- FOOTER  */
-.footer-size {padding-top: 60px;}
 
-.footer {background-color: #2F303A;}
+.footer {background-color: #2F303A;
+padding-top: 60px;
+padding-bottom: 60px;}
 
 .footer-address {
 font-style: normal;
@@ -350,6 +365,8 @@ letter-spacing: 0.03em;
 color: var(--colour-white);
 }
 
+.footer-li:not(:last-child) {margin-bottom: 9px;}
+
 .footer-contact {
 line-height: 1.71;
 font-style: normal;
@@ -357,7 +374,7 @@ letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-info {padding-top: 20px;}
+.footer-info {margin-top: 20px;}
 
 
 /* --------------------------- /FOOTER  */
